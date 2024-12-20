@@ -45,7 +45,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="safe_pfl_distance.html">Safe PFL Distance Module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Utils Module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Utils Module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#safe_pfl_distance.utils.model_loader.load_model"><code class="docutils literal notranslate"><span class="pre">load_model()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -77,6 +80,22 @@
              
   <section id="utils-module">
 <h1>Utils Module<a class="headerlink" href="#utils-module" title="Link to this heading"></a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="safe_pfl_distance.utils.model_loader.load_model">
+<span class="sig-prename descclassname"><span class="pre">safe_pfl_distance.utils.model_loader.</span></span><span class="sig-name descname"><span class="pre">load_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_path_prefix</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'./models'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#safe_pfl_distance.utils.model_loader.load_model" title="Link to this definition"></a></dt>
+<dd><p>Loads a PyTorch model from a specified file path.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>node_id (int): Identifier for the specific model node.
+model_type (str): Type of the model (e.g., “classification”, “regression”).
+model_path_prefix (str, optional): Base directory where model files are stored. Defaults to “./models”.</p>
+</dd>
+<dt>Returns:</dt><dd><p>torch.nn.Module or None: The loaded PyTorch model if successful, otherwise None.</p>
+</dd>
+<dt>Raises:</dt><dd><p>ValueError: If input parameters are invalid.</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
 
 

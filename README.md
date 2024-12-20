@@ -26,3 +26,7 @@ pip install safe-pfl-distance --user
 ## Get started using safe-pfl-distance
 
 For usage refer to [Examples](https://github.com/safe-pfl/examples/distance) repository.
+
+## Package documentation
+
+Visit [this](https://safe-pfl.github.io/distances/) github pages for this package detailed documentation.

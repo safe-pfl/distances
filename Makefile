@@ -44,4 +44,5 @@ download:
 download-clean:
 	pip download --no-deps safe-pfl-distance
 
-
+doc-generate:
+	@cd docs && make clean && make html

@@ -17,12 +17,18 @@ from safe_pfl_distance.utils.cosine import cosine_distance
 
 
 class ModelDistancesCalculator:
-    def __init__(self, model_type, sensitivity_parameter=0.01, model_path_prefix:str = "./models", precision=5):
+    def __init__(
+        self,
+        model_type,
+        sensitivity_parameter=0.01,
+        model_path_prefix: str = "./models",
+        precision=5,
+    ):
         self.model_type = model_type.lower()
         self.model_path_prefix = model_path_prefix
-        
+
         self.precision = precision if precision > 0 else 5
-        
+
         # Validate model_type
         if self.model_type not in ["cnn", "resnet", "google", "alexnet", "vgg"]:
             raise ValueError(
@@ -35,9 +41,11 @@ class ModelDistancesCalculator:
         self.models = []
         self.model_weights = []
         self.model_top_weight_indices = []
-        self.P = sensitivity_parameter  # Percentage for top weights (1%)
+        self.p = sensitivity_parameter  # Percentage for top weights (1%)
 
-        self.models = load_models(self.client_ids, self.model_type, self.model_path_prefix)
+        self.models = load_models(
+            self.client_ids, self.model_type, self.model_path_prefix
+        )
 
     def extract_model_weights(self):
         for idx, model in enumerate(self.models):
@@ -69,7 +77,7 @@ class ModelDistancesCalculator:
 
     def prepare_top_weight_indices(self):
         N = len(self.model_weights[0])  # Total number of weights
-        p = int(self.P * N)
+        p = int(self.p * N)
         if p == 0:
             p = 1  # Ensure at least one weight is selected
 
@@ -87,7 +95,7 @@ class ModelDistancesCalculator:
             for j in range(num_models):
                 if is_indices:
                     distance = distance_func(
-                        i, j, self.model_top_weight_indices, self.P
+                        i, j, self.model_top_weight_indices, self.p
                     )
                 else:
                     distance = distance_func(

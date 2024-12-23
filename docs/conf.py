@@ -30,7 +30,7 @@ exclude_patterns = [
     "Thumbs.db",
 ]
 
-autodoc_mock_imports = ["torch"]
+autodoc_mock_imports = ["torch", "scipy", "numpy"]
 
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output

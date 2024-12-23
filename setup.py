@@ -1,14 +1,14 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="safe-pfl-distance",
-    version="0.1.2",
+    version="0.1.3",
     description="safe-pfl distance calculator",
     url="https://github.com/safe-pfl/distances",
     author="MohammadMojtaba Roshani",
     author_email="mohammadmojtabaroshani@outlook.com",
     license="Apache Software License",
-    packages=["safe-pfl-distance"],
+    packages=find_packages(),
     install_requires=[
         "torch>=2.5",
         "matplotlib==3.6.3",

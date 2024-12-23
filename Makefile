@@ -1,7 +1,7 @@
-install:
+install-local:
 	pip install .
 
-upgrade:
+upgrade-local:
 	pip install --upgrade .
 
 uninstall:

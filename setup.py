@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="safe-pfl-distance",
-    version="0.1.3",
+    version="0.1.4",
     description="safe-pfl distance calculator",
     url="https://github.com/safe-pfl/distances",
     author="MohammadMojtaba Roshani",
@@ -16,12 +16,14 @@ setup(
         "matplotlib2tikz==0.7.6",
         "scipy>=1.14",
         "scikit-learn>=1.5",
-        "numpy>=2.1",
+        "numpy>=2.0",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",
         "License :: OSI Approved :: Apache Software License",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
         "Programming Language :: Python :: 3.13",
         "Programming Language :: Python :: 3.14",

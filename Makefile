@@ -32,6 +32,10 @@ publish-test: increment-version source-distribution sign
 	@echo "test publishing"
 	@twine upload --repository-url https://test.pypi.org/legacy/ dist/* --verbose
 
+publish: check source-distribution sign
+	@echo "test publishing"
+	@twine upload dist/* --verbose
+
 install-test:
 	pip install --index-url https://test.pypi.org/simple/ safe-pfl-distance --user
 
